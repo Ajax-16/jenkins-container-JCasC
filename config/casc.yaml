@@ -1,0 +1,28 @@
+# Este es un archivo de configuración configuration as code (CasC) para Jenkins también conocido como JCasC (Jenkins Configuration as Code)
+# Para más información sobre este archivo de configuración, referencia: 
+# -> https://github.com/jenkinsci/configuration-as-code-plugin/blob/master/README.md
+# -----------------------------------------------------------------------------------------------------------------------------------------
+
+#Configuración de jenkins
+# Creación de usuario única al crear la instancia. La creación en el entorno web está deshabilitada. Puedes habilitarla seteando "allowsSignup" a true. 
+jenkins:
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+       - id: ${JENKINS_ADMIN_ID}
+         password: ${JENKINS_ADMIN_PASSWORD}
+  authorizationStrategy:
+    globalMatrix:
+      permissions:
+        - "Overall/Administer:admin"
+        - "Overall/Read:authenticated"
+  remotingSecurity:
+      enabled: true
+
+
+# Parámetros de configuración sin clasificar por jenkins
+# Especifica la URL del servidor Jenkins. 
+unclassified:
+  location:
+    url: http://localhost:8080/
