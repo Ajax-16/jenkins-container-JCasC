@@ -1,14 +1,17 @@
-# Este es un archivo de configuración configuration as code (CasC) para Jenkins también conocido como JCasC (Jenkins Configuration as Code)
+# Archivo casc.yaml de ejemplo
+# ----------------------------------------------------------------------------------
+# Este es un archivo de configuración configuration as code (CasC) para Jenkins 
+# también conocido como JCasC (Jenkins Configuration as Code).
 # Para más información sobre este archivo de configuración, referencia: 
 # -> https://github.com/jenkinsci/configuration-as-code-plugin/blob/master/README.md
-# -----------------------------------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------
 
 #Configuración de jenkins
 # Creación de usuario única al crear la instancia.
 jenkins:
   securityRealm:
     local:
-      allowsSignup: true
+      allowsSignup: false
       # admin users
       users:
        - id: ${JENKINS_ADMIN_ID}

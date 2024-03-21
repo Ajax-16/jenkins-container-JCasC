@@ -13,9 +13,11 @@ COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 # Ejecuta el cli de Jenkins para instalar los plugins especificados en el archivo anterior.
 RUN jenkins-plugin-cli -f /usr/share/jenkins/ref/plugins.txt
 
+# Establece argumentos en tiempo de build de la imagen. Para modificarlos añade la bandera --build-arg <clave>=<valor> al comando docker build.
 ARG jenkins_admin_id=admin
 ARG jenkins_admin_pass=secret
 
+# Establece las variables de entorno que hacen referencia a las credenciales del usuario admin. Toman el valor de los argumentos especificados anteriormente.
 ENV JENKINS_ADMIN_ID $jenkins_admin_id
 ENV JENKINS_ADMIN_PASSWORD $jenkins_admin_pass
 

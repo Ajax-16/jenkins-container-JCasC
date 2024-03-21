@@ -1,0 +1,20 @@
+# docker-compose.yaml de ejemplo
+# ----------------------------------------------------------------------------------------
+# El archivo de configuración casc.yaml está montado, si es editado mientras el contenedor
+# está activo accede a: 
+# -> http://localhost:8080/manage/configuration-as-code/
+# y clicka en "Reload Existing Configuration" para que los cambios se apliquen
+# ----------------------------------------------------------------------------------------
+version: '3'
+
+services:
+  jenkins:
+    build: ../
+    ports:
+      - 8080:8080
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - ../config/casc.yaml:/var/jenkins_home/casc.yaml
+
+volumes:
+  jenkins_home:
