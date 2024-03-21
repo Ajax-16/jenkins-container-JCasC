@@ -20,7 +20,7 @@ docker build --build-arg jenkins_admin_id=admin_on_build --build-arg jenkins_adm
 Al ejecutar el siguiente comando:
 
 ```bash
-docker run --name jenkins --rm -p 8080:8080 jenkins:jcasc
+docker run --name jenkins -d -p 8080:8080 -v jenkins_home:/var/jenkins_home jenkins:jcasc
 ```
 
 Jenkins comienza a ejecutarse en el puerto 8080 de la instancia de docker, bindeada con la de nuestra máquina local, por lo que al acceder a **[localhost:8080/login](http://localhost:8080/login)** en este caso, podemos comprobar que admin_on_build es el usuario creado de manera predeterminada.

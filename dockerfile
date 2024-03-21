@@ -1,5 +1,5 @@
 # Imagen predeterminada de jenkins que hace uso de jdk11
-FROM jenkins/jenkins:lts-jdk11
+FROM jenkins/jenkins:lts-jdk17
 
 # Bloquea la instalación por SetupWizard para que no salte la primera vez que se inicia Jenkins.
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
