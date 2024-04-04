@@ -29,4 +29,4 @@ jenkins:
 # Especifica la URL del servidor Jenkins. 
 unclassified:
   location:
-    url: http://localhost:8080/
+    url: http://jenkins:8080/
