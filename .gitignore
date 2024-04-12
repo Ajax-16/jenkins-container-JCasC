@@ -1,2 +1,4 @@
 aws
-compose/.env
+.env
+**/gitlab_data/
+**/jenkins_data/

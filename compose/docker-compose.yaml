@@ -14,6 +14,7 @@ services:
       - 8080:8080
     volumes:
       - jenkins_home:/var/jenkins_home
+      - ./jenkins_data:/var/jenkins_home
       - ../jenkins/config/casc.yaml:/var/jenkins_home/casc.yaml
   gitlab:
     image: gitlab/gitlab-ce:latest
@@ -26,6 +27,7 @@ services:
       - 30022:22
     volumes:
       - gitlab_data:/var/opt/gitlab
+      - ./gitlab_data:/var/opt/gitlab
 
 volumes:
   jenkins_home:
