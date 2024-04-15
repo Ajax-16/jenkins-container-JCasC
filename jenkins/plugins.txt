@@ -18,5 +18,9 @@ ssh-slaves:latest
 timestamper:latest
 workflow-aggregator:latest
 ws-cleanup:latest
-maven-plugin:latest
 gitlab-plugin:latest
+nodejs:latest
+docker-plugin:latest
+docker-workflow:latest
+docker-build-step:latest
+docker-build-publish:latest
