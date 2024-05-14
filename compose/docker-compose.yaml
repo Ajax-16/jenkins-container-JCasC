@@ -5,7 +5,6 @@
 # -> http://localhost:8080/manage/configuration-as-code/
 # y clicka en "Reload Existing Configuration" para que los cambios se apliquen
 # ----------------------------------------------------------------------------------------
-version: '3'
 
 services:
   jenkins:
